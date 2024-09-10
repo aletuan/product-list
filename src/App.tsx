@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import ProductList from './ProductList';
+import ProductList from './components/ProductList';
 
 const App: React.FC = () => {
   return (

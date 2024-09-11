@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './ProductList.css';
 
 interface Product {
@@ -34,11 +35,13 @@ const ProductList: React.FC = () => {
       <ul>
         {products.map(product => (
           <li key={product.id} className="product-item">
-            <div className="product-info">
-              <span className="product-name">{product.name}</span>
-              <span className="product-price">{product.price}</span>
-            </div>
-            <span className="product-category">{product.category}</span>
+            <Link to={`/product/${product.id}`} className="product-link">
+              <div className="product-info">
+                <span className="product-name">{product.name}</span>
+                <span className="product-price">{product.price}</span>
+              </div>
+              <span className="product-category">{product.category}</span>
+            </Link>
           </li>
         ))}
       </ul>

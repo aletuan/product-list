@@ -35,13 +35,13 @@ const ProductList: React.FC = () => {
       <ul>
         {products.map(product => (
           <li key={product.id} className="product-item">
-            <Link to={`/product/${product.id}`} className="product-link">
-              <div className="product-info">
+            <div className="product-info">
+              <Link to={`/product/${product.id}`} className="product-link">
                 <span className="product-name">{product.name}</span>
-                <span className="product-price">{product.price}</span>
-              </div>
-              <span className="product-category">{product.category}</span>
-            </Link>
+              </Link>
+              <span className="product-price">{product.price}</span>
+            </div>
+            <span className="product-category">{product.category}</span>
           </li>
         ))}
       </ul>

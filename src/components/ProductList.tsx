@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ProductList.css';
 
 interface Product {
   id: number;
   name: string;
   price: string;
-  category: string; // Added category field
+  category: string;
 }
 
-
 const ProductList: React.FC = () => {
-  const products: Product[] = [
-    { id: 1, name: 'Apple iPhone 13', price: '$799', category: 'Electronics' },
-    { id: 2, name: 'Samsung Galaxy S21', price: '$699', category: 'Electronics' },
-    { id: 3, name: 'Google Pixel 6', price: '$599', category: 'Electronics' },
-  ];
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch('http://localhost:3002/products')
+      .then(response => response.json())
+      .then(data => {
+        setProducts(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        setError(error.message);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <div className="product-list">
@@ -23,7 +36,7 @@ const ProductList: React.FC = () => {
           <li key={product.id} className="product-item">
             <div className="product-info">
               <span className="product-name">{product.name}</span>
-              <span className="product-price">{product.price}</span>          
+              <span className="product-price">{product.price}</span>
             </div>
             <span className="product-category">{product.category}</span>
           </li>

@@ -1,0 +1,7 @@
+{
+    "products": [
+      { "id": 1, "name": "Apple iPhone 13", "price": "$799", "category": "Electronics" },
+      { "id": 2, "name": "Samsung Galaxy S21", "price": "$699", "category": "Electronics" },
+      { "id": 3, "name": "Google Pixel 6", "price": "$599", "category": "Electronics" }
+    ]
+  }

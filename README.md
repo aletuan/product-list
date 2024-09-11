@@ -46,29 +46,37 @@ Make sure you have the following installed on your machine:
     yarn install
     ```
 
-### Available Scripts
-In the project directory, you can run:
+### Running the Mock Server
 
-`npm start` or `yarn start`
+To run the mock server, follow these steps:
 
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in your browser.
+1. Install `json-server` globally if you haven't already:
+   ```sh
+   npm install -g json-server
+   ```
 
-The page will reload when you make changes.
-You may also see any lint errors in the console.
+2. Start the mock server:
+    ```sh
+    json-server --watch db.json --port 3001
+    ```
 
-`npm test` or `yarn test`
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
+This will start a mock server at http://localhost:3001 that serves the data from db.json.
 
-`npm run build` or `yarn build`
-Builds the app for production to the build folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Running the Application
 
-`npm run eject` or `yarn eject`
-Note: this is a one-way operation. Once you eject, you can’t go back!
+After starting the mock server, you can run the application:
 
-If you aren’t satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
+1. Install the dependencies:
+```sh
+npm install
+```
+
+2. Start the application:
+```sh
+npm start
+```
+
+This will start the application at http://localhost:3000.
 
 ### Project Structure
 
@@ -77,8 +85,12 @@ product-list/
 ├── node_modules/
 ├── public/
 ├── src/
+├── components/
+├── ProductList.tsx  
+│ ├── ProductDetail.tsx 
+│ ├── ProductList.css
+│ ├── ProductDetail.css
 │   ├── App.tsx
-│   ├── ProductList.tsx
 │   ├── index.tsx
 │   ├── logo.svg
 │   ├── custom.d.ts
@@ -88,6 +100,7 @@ product-list/
 ├── .gitignore
 ├── package.json
 ├── tsconfig.json
+├── db.json 
 ├── README.md
 └── ...
 ```

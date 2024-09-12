@@ -36,8 +36,7 @@ const CoffeeShopsList: React.FC = () => {
   }
 
   return (
-    <div>
-      <h1>Coffee Shops List</h1>
+    <div className="container">
       <div className="coffee-shop-grid">
         {coffeeShops.map(shop => (
           <div key={shop.id} className="coffee-shop-tile">

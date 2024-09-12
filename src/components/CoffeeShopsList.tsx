@@ -37,17 +37,18 @@ const CoffeeShopsList: React.FC = () => {
 
   return (
     <div>
-      <ul className="coffee-shop-list">
+      <h1>Coffee Shops List</h1>
+      <div className="coffee-shop-grid">
         {coffeeShops.map(shop => (
-          <li key={shop.id} className="coffee-shop-item">
+          <div key={shop.id} className="coffee-shop-tile">
             <Link to={`/coffee-shop/${shop.id}`} className="coffee-shop-link">
               <span className="coffee-shop-name">{shop.name}</span>
               <span className="coffee-shop-price">{shop.price}</span>
               <span className="coffee-shop-location">{shop.category}</span>
             </Link>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

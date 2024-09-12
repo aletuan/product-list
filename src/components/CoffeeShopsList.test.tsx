@@ -16,9 +16,9 @@ global.MutationObserver = class {
 
 // Mock coffee shop data
 const mockCoffeeShops = [
-  { id: 1, name: 'Saigon Brew', price: '$5', category: 'Ho Chi Minh City' },
-  { id: 2, name: 'Hanoi Beans', price: '$6', category: 'Hanoi' },
-  { id: 3, name: 'Da Nang Delight', price: '$7', category: 'Da Nang' },
+  { id: 1, name: 'Saigon Brew', voteRate: '4.5', category: 'Ho Chi Minh City', description: 'A cozy place with the best brews in Saigon.' },
+  { id: 2, name: 'Hanoi Beans', voteRate: '4.7', category: 'Hanoi', description: "Experience the rich flavors of Hanoi's finest beans." },
+  { id: 3, name: 'Da Nang Delight', voteRate: '4.6', category: 'Da Nang', description: 'A delightful spot to enjoy coffee in Da Nang.' },
 ];
 
 // Mock fetch
@@ -48,10 +48,15 @@ test('renders coffee shops list with correct shops', async () => {
   expect(await screen.findByText('Hanoi Beans')).toBeInTheDocument();
   expect(await screen.findByText('Da Nang Delight')).toBeInTheDocument();
 
-  // Check if the coffee shop prices are rendered
-  expect(await screen.findByText('$5')).toBeInTheDocument();
-  expect(await screen.findByText('$6')).toBeInTheDocument();
-  expect(await screen.findByText('$7')).toBeInTheDocument();
+  // Check if the coffee shop vote rates are rendered
+  expect(await screen.findByText('4.5')).toBeInTheDocument();
+  expect(await screen.findByText('4.7')).toBeInTheDocument();
+  expect(await screen.findByText('4.6')).toBeInTheDocument();
+
+  // Check if the coffee shop descriptions are rendered
+  expect(await screen.findByText('A cozy place with the best brews in Saigon.')).toBeInTheDocument();
+  expect(await screen.findByText("Experience the rich flavors of Hanoi's finest beans.")).toBeInTheDocument();
+  expect(await screen.findByText('A delightful spot to enjoy coffee in Da Nang.')).toBeInTheDocument();
 
   // Check if the coffee shop locations are rendered
   expect(await screen.findByText('Ho Chi Minh City')).toBeInTheDocument();

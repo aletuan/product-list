@@ -5,8 +5,9 @@ import './CoffeeShopsList.css';
 interface CoffeeShop {
   id: number;
   name: string;
-  price: string;
+  voteRate: string;
   category: string;
+  description: string;
 }
 
 const CoffeeShopsList: React.FC = () => {
@@ -42,7 +43,8 @@ const CoffeeShopsList: React.FC = () => {
           <div key={shop.id} className="coffee-shop-tile">
             <Link to={`/coffee-shop/${shop.id}`} className="coffee-shop-link">
               <span className="coffee-shop-name">{shop.name}</span>
-              <span className="coffee-shop-price">{shop.price}</span>
+              <span className="coffee-shop-vote-rate">{shop.voteRate}</span>
+              <p className="coffee-shop-description">{shop.description}</p>              
               <span className="coffee-shop-location">{shop.category}</span>
             </Link>
           </div>

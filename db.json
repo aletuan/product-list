@@ -1,7 +1,7 @@
 {
-    "products": [
-      { "id": 1, "name": "Apple iPhone 13", "price": "$799", "category": "Electronics" },
-      { "id": 2, "name": "Samsung Galaxy S21", "price": "$699", "category": "Electronics" },
-      { "id": 3, "name": "Google Pixel 6", "price": "$599", "category": "Electronics" }
-    ]
-  }
+  "coffeeShops": [
+    { "id": 1, "name": "Saigon Brew", "price": "$5", "category": "Ho Chi Minh City" },
+    { "id": 2, "name": "Hanoi Beans", "price": "$6", "category": "Hanoi" },
+    { "id": 3, "name": "Da Nang Delight", "price": "$7", "category": "Da Nang" }
+  ]
+}

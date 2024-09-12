@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import ProductList from './components/ProductList';
-import ProductDetail from './components/ProductDetail';
+import CoffeeShopsList from './components/CoffeeShopsList';
 
 const App: React.FC = () => {
   return (
@@ -13,8 +12,7 @@ const App: React.FC = () => {
         </header>
         <main className="App-main">
           <Routes>
-            <Route path="/" element={<ProductList />} />
-            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/" element={<CoffeeShopsList />} />
           </Routes>
         </main>
       </div>

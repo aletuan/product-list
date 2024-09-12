@@ -1,0 +1,45 @@
+.coffee-shop-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.coffee-shop-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coffee-shop-item:last-child {
+  border-bottom: none;
+}
+
+.coffee-shop-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.coffee-shop-price {
+  color: #888;
+  font-size: 1em;
+}
+
+.coffee-shop-location {
+  display: block;
+  font-style: italic;
+  color: #555;
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+
+.coffee-shop-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.coffee-shop-link:hover {
+  text-decoration: underline;
+}

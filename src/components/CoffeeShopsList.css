@@ -40,8 +40,17 @@ body, html {
 .coffee-shop-vote-rate {
   color: #888;
   font-size: 1em;
-  display: block;
+  display: flex;
   margin-bottom: 5px;
+}
+
+.star {
+  font-size: 1.2em;
+  color: #ffd700; /* Gold color for stars */
+}
+
+.star.filled {
+  color: #ffd700; /* Gold color for filled stars */
 }
 
 .coffee-shop-location {

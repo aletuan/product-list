@@ -1,7 +1,7 @@
 {
   "coffeeShops": [
-    { "id": 1, "name": "Saigon Brew", "voteRate": "4.5", "category": "Ho Chi Minh City", "description": "A cozy place with the best brews in Saigon." },
-    { "id": 2, "name": "Hanoi Beans", "voteRate": "4.7", "category": "Hanoi", "description": "Experience the rich flavors of Hanoi's finest beans." },
-    { "id": 3, "name": "Da Nang Delight", "voteRate": "4.6", "category": "Da Nang", "description": "A delightful spot to enjoy coffee in Da Nang." }
+    { "id": 1, "name": "Saigon Brew", "voteRate": "4", "category": "Ho Chi Minh City", "description": "A cozy place with the best brews in Saigon." },
+    { "id": 2, "name": "Hanoi Beans", "voteRate": "3", "category": "Hanoi", "description": "Experience the rich flavors of Hanoi's finest beans." },
+    { "id": 3, "name": "Da Nang Delight", "voteRate": "2", "category": "Da Nang", "description": "A delightful spot to enjoy coffee in Da Nang." }
   ]
 }

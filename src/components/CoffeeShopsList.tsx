@@ -28,6 +28,18 @@ const CoffeeShopsList: React.FC = () => {
       });
   }, []);
 
+  const renderStars = (rate: number) => {
+    const stars = [];
+    for (let i = 0; i < 5; i++) {
+      if (i < rate) {
+        stars.push(<span key={i} className="star filled">★</span>);
+      } else {
+        stars.push(<span key={i} className="star">☆</span>);
+      }
+    }
+    return stars;
+  };  
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -43,10 +55,12 @@ const CoffeeShopsList: React.FC = () => {
           <div key={shop.id} className="coffee-shop-tile">
             <Link to={`/coffee-shop/${shop.id}`} className="coffee-shop-link">
               <span className="coffee-shop-name">{shop.name}</span>
-              <span className="coffee-shop-vote-rate">Rate: {shop.voteRate}</span>
+            </Link>              
+              <div className="coffee-shop-vote-rate">
+                {renderStars(parseFloat(shop.voteRate))}
+              </div>
               <p className="coffee-shop-description">{shop.description}</p>              
               <span className="coffee-shop-location">{shop.category}</span>
-            </Link>
           </div>
         ))}
       </div>

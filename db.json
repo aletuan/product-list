@@ -1,7 +1,39 @@
 {
   "coffeeShops": [
-    { "id": 1, "name": "Saigon Brew", "voteRate": "4", "category": "Ho Chi Minh City", "description": "A cozy place with the best brews in Saigon." },
-    { "id": 2, "name": "Hanoi Beans", "voteRate": "3", "category": "Hanoi", "description": "Experience the rich flavors of Hanoi's finest beans." },
-    { "id": 3, "name": "Da Nang Delight", "voteRate": "2", "category": "Da Nang", "description": "A delightful spot to enjoy coffee in Da Nang." }
+    { 
+      "id": 1, 
+      "name": "Okkio Caffe", 
+      "voteRate": "4", 
+      "category": "Ho Chi Minh City", 
+      "description": "This cozy spot is known for its high-quality coffee, especially their egg coffee and coconut coffee, which are unique to Vietnam. The ambiance of this cafe, with its colorful tiled floor and diner-like vibe, makes it a popular choice for locals and tourists alike." 
+    },
+    { 
+      "id": 2, 
+      "name": "Cong Caphe", 
+      "voteRate": "3", 
+      "category": "Hanoi", 
+      "description": "A nostalgic cafe inspired by Vietnam’s communist era, this popular chain offers a wide range of traditional Vietnamese coffees, including the famous egg coffee. The retro decor and army-themed memorabilia create a unique and memorable experience." 
+    },
+    { 
+      "id": 3, 
+      "name": "La Viet Coffee", 
+      "voteRate": "2", 
+      "category": "Da Lat", 
+      "description": "Located in Vietnam’s coffee-growing region, La Viet serves freshly roasted Arabica beans. The large warehouse-style space offers tours of their coffee processing and is perfect for spending a few hours enjoying a cup of coffee." 
+    },
+    { 
+      "id": 4, 
+      "name": "Rainforest", 
+      "voteRate": "2", 
+      "category": "Nha Trang", 
+      "description": "This cafe has a treehouse-like design with hanging plants and cozy booths, providing a serene environment to enjoy coffee. It’s a great escape for those who love nature-inspired spaces." 
+    },
+    { 
+      "id": 5, 
+      "name": "The Workshop Coffee", 
+      "voteRate": "2", 
+      "category": "Ho Chi Minh City", 
+      "description": "Known for its artisanal approach to coffee, The Workshop is a must-visit for coffee lovers who enjoy a mix of pour-over, siphon brewing, and great ambiance. The airy, vintage industrial space is popular among digital nomads and entrepreneurs." 
+    }        
   ]
 }

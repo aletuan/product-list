@@ -12,8 +12,11 @@ body, html {
 
 .coffee-shop-grid {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
+  width: 100%;
+  max-width: 1200px; /* Optional: limit the maximum width of the grid */
 }
 
 .coffee-shop-tile {
@@ -22,11 +25,25 @@ body, html {
   padding: 15px;
   text-align: left; /* Align text to the left */
   background-color: #f9f9f9;
-  flex: 0 0 auto; /* Prevents shrinking */
+  flex: 1 1 calc(33.333% - 40px); /* Three items per row with gap */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  max-width: calc(33.333% - 40px); /* Ensure items have the same size */
 }
 
 .coffee-shop-tile:hover {
   transform: scale(1.05);
+}
+
+.coffee-shop-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.coffee-shop-details {
+  flex: 1;
 }
 
 .coffee-shop-name {
@@ -68,8 +85,25 @@ body, html {
 .coffee-shop-link {
   text-decoration: none;
   color: inherit;
+  display: flex;
 }
 
 .coffee-shop-link:hover {
   text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .coffee-shop-tile {
+    flex: 1 1 calc(50% - 40px); /* Two items per row */
+    max-width: calc(50% - 40px); /* Ensure items have the same size */
+  }
+}
+
+@media (max-width: 768px) {
+  .coffee-shop-tile {
+    flex: 1 1 calc(100% - 40px); /* One item per row */
+    max-width: calc(100% - 40px); /* Ensure items have the same size */
+    margin: 0 auto; /* Center the item */
+  }
 }

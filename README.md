@@ -1,6 +1,6 @@
-# Product List Application
+# Coffee Shops Branding
 
-This project is a simple React application that displays a list of products. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses TypeScript for type safety.
+This project is for branding coffee shops.
 
 ## Table of Contents
 

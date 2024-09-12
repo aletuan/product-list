@@ -1,6 +1,7 @@
 {
-  "name": "product-list",
+  "name": "coffee-shops-branding",
   "version": "0.1.0",
+  "description": "A project for branding coffee shops",
   "private": true,
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",
